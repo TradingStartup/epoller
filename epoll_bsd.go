@@ -80,7 +80,7 @@ func (e *epoll) Close() error {
 }
 
 func (e *epoll) Add(conn net.Conn) error {
-	fd := socketFD(conn)
+	fd := SocketFD(conn)
 
 	e.mu.Lock()
 	defer e.mu.Unlock()
@@ -96,7 +96,7 @@ func (e *epoll) Add(conn net.Conn) error {
 }
 
 func (e *epoll) Remove(conn net.Conn) error {
-	fd := socketFD(conn)
+	fd := SocketFD(conn)
 
 	e.mu.Lock()
 	defer e.mu.Unlock()

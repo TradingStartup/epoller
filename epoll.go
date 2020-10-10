@@ -15,7 +15,7 @@ type Poller interface {
 	Close() error
 }
 
-func socketFD(conn net.Conn) int {
+func SocketFD(conn net.Conn) int {
 	tcpConn := reflect.Indirect(reflect.ValueOf(conn)).FieldByName("conn")
 	fdVal := tcpConn.FieldByName("fd")
 	pfdVal := reflect.Indirect(fdVal).FieldByName("pfd")
