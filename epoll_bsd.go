@@ -66,6 +66,10 @@ func NewPollerWithBuffer(count int) (Poller, error) {
 	}, nil
 }
 
+func (e *epoll) GetConnection() map[int]net.Conn {
+	return e.connections
+}
+
 func (e *epoll) Close() error {
 	e.mu.Lock()
 	defer e.mu.Unlock()

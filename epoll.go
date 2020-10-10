@@ -11,6 +11,7 @@ type Poller interface {
 	Wait(count int) ([]net.Conn, error)
 	WaitWithBuffer() ([]net.Conn, error)
 	WaitChan(count int) <-chan []net.Conn
+	GetConnection() map[int]net.Conn
 	Close() error
 }
 
