@@ -3,7 +3,7 @@
 package epoller
 
 import (
-	"github.com/smallnest/epoller/wepoll"
+	"github.com/TradingStartup/epoller/wepoll"
 )
 
 type epoll = wepoll.Epoll

@@ -8,7 +8,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/smallnest/epoller"
+	"github.com/TradingStartup/epoller"
 	"github.com/smallnest/redcon"
 )
 
